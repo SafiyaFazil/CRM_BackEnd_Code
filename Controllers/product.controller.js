@@ -1,9 +1,6 @@
 import { ReturnDocument } from "mongodb";
 import { Products } from "../Models/product.schema.js";
 
-export function getAllProduct() {
-  return Products.find().populate("user", "userName email");
-}
 
 export function getSearchProduct(item) {
   const result = Products.find({ productName: item });

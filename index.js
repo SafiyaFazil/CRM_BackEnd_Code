@@ -5,7 +5,7 @@ import { dbConnection } from "./Database/dbconfig.js";
 import { userRouter } from "./Routers/user.router.js";
 import { isAuthenticated } from "./Middleware/auth.js";
 import { productRouter } from "./Routers/product.router.js";
-// import { adminRouter } from "./Routers/admin.router.js";
+import { adminRouter } from "./Routers/admin.router.js";
 
 dotenv.config();
 const port = process.env.PORT;
@@ -27,7 +27,7 @@ app.get("/", (req, res) => {
 });
 
 app.use("/api/user", userRouter);
-// app.use("/api/admin", adminRouter);
+app.use("/api/admin", adminRouter);
 app.use("/api/products", isAuthenticated, productRouter);
 
 app.listen(port, () => {
