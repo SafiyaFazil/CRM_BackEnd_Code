@@ -4,12 +4,10 @@ import mongoose from "mongoose";
 const productSchema = new mongoose.Schema({
   productName: {
     type: String,
-    unique: true,
     required: true,
   },
   productCode: {
     type: String,
-    unique: true,
     required: true,
   },
   date: {
