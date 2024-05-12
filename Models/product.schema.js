@@ -4,13 +4,13 @@ import mongoose from "mongoose";
 const productSchema = new mongoose.Schema({
   productName: {
     type: String,
-    unique: true,
-    // required: true, // Remove 'required' constraint
+    // unique: true, // Remove 'unique' constraint
+    required: true,
   },
   productCode: {
     type: String,
-    unique: true,
-    // required: true, // Remove 'required' constraint
+    // unique: true, // Remove 'unique' constraint
+    required: true,
   },
   date: {
     type: String,
