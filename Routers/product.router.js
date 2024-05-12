@@ -46,7 +46,7 @@ router.post("/user/add", async (req, res) => {
       .status(200)
       .json({ data: newProduct, message: "Notes Saved Successfully" });
   } catch (error) {
-    res.status(500), json({ Error: "Internal Server Error" });
+    res.status(500).json({ Error: "Internal Server Error" });
   }
 });
 
